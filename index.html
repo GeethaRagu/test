@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"/>
+        </div>
+        <div>
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" name="pincode"/>
+        </div>
+        <input type="submit" value="Submit" id="submit"/>
+    </form>
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td id="tablename"></td>
+                <td id="tablepincode"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            const name= document.getElementById("name").value;
+            const pincode= document.getElementById("pincode").value;
+            document.getElementById("tablename").textContent = name;
+            document.getElementById("tablepincode").textContent = pincode;
+        })
+    </script>
+</body>
+</html>
