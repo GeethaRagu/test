@@ -208,6 +208,15 @@
         const thead6 = document.createElement("th");
         const thead7 = document.createElement("th");
         const thead8 = document.createElement("th");
+        const trow2 = document.createElement("tr");
+        const tdata1 = document.createElement("td");
+        const tdata2 = document.createElement("td");
+        const tdata3 = document.createElement("td");
+        const tdata4 = document.createElement("td");
+        const tdata5 = document.createElement("td");
+        const tdata6 = document.createElement("td");
+        const tdata7 = document.createElement("td");
+        const tdata8 = document.createElement("td");
 
         table.id="mytable";
         table.classList.add("table") ;
@@ -220,8 +229,14 @@
         thead6.innerText = "Favourite Food";
         thead7.innerText = "State";
         thead8.innerText = "Country";
+
+
+        tdata1.innerText = name;
+        tdata4.innerText = pincode;
         trow1.append(thead1,thead2,thead3,thead4,thead5,thead6,thead7,thead8);
-        thead.append(trow1)
+        thead.append(trow1);
+        trow2.append(tdata1,tdata2,tdata3,tdata4,tdata5,tdata6,tdata7,tdata8)
+        tbody.append(trow2);
         table.append(thead,tbody);
         parentdiv.append(table);
 
