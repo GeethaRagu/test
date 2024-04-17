@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form id="myForm">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name"/>
-        </div>
-        <div>
-            <label for="pincode">Pincode</label>
-            <input type="text" id="pincode" name="pincode"/>
-        </div>
-        <input type="submit" value="Submit" id="submit"/>
-    </form>
-    <table>
-        <thead></thead>
-        <tbody>
-            <tr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Form Manipulation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <section>
+      <div class="container">
+        <div class="row">
+          <h1 id="title" class="d-flex justify-content-center">
+            DOM Manipulation with Forms
+          </h1>
+          <br />
+          <p id="description" class="d-flex justify-content-center">
+            The form and table are created using HTML,CSS.Manipulation are done
+            using DOM.
+          </p>
+          <div class="col-12 col-md-6">
+            <h2>Input Form</h2>
+            <form id="myForm">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
+              </div>
+              <div>
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" />
+              </div>
+              <input type="submit" value="Submit" id="submit" />
+            </form>
+          </div>
+          <table>
+            <thead></thead>
+            <tbody>
+              <tr>
                 <td id="tablename"></td>
                 <td id="tablepincode"></td>
-            </tr>
-        </tbody>
-    </table>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
     <script>
-        const form = document.getElementById("myForm");
-        form.addEventListener("submit",(e)=>{
-            e.preventDefault();
-            const name= document.getElementById("name").value;
-            const pincode= document.getElementById("pincode").value;
-            document.getElementById("tablename").textContent = name;
-            document.getElementById("tablepincode").textContent = pincode;
-            form.reset();
-        })
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const pincode = document.getElementById("pincode").value;
+        document.getElementById("tablename").textContent = name;
+        document.getElementById("tablepincode").textContent = pincode;
+        form.reset();
+      });
     </script>
-</body>
+  </body>
 </html>
