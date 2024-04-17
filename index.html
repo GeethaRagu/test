@@ -171,7 +171,9 @@
               <input type="submit" value="Submit" id="submit" />
             </form>
           </div>
-          <div class="col-12 col-md-6" id="tableview"></div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mt-3" id="tableview"></div>
         </div>
       </div>
     </section>
@@ -213,7 +215,7 @@
         const tdata8 = document.createElement("td");
 
         table.id = "mytable";
-        table.classList.add("table");
+        table.classList.add("table", "table-sm","border","border-2","border-dark");
 
         title.innerText = "Table-View";
         thead1.innerText = "Firstname";
@@ -246,8 +248,8 @@
         let r1 = result.split(" ");
         if (r1.length < 3) {
           alert("Kinldy choose atleast two favourite items");
-          table.setAttribute("style","display:none");
-          title.setAttribute("style","display:none");
+          table.setAttribute("style", "display:none");
+          title.setAttribute("style", "display:none");
         } else tdata6.innerText = result;
 
         tdata7.innerText = state;
