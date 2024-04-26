@@ -16,6 +16,6 @@ function element(tag, classname, id, text) {
 
 submitWord.addEventListener("click", () => {
   const word = wordInput.value;
-  console.log(word);
+  alert(word);
 
 })
