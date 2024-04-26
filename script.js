@@ -1,5 +1,5 @@
 const wordInput = document.getElementById("wordInput");
-const submitWord = document.getElementById("submitWord");
+const submitWord = document.getElementById("clickforResult");
 const resultArea = document.getElementById("resultDisplay");
 const accordion = document.getElementById("accordionFlushExample");
 
@@ -15,8 +15,6 @@ function element(tag, classname, id, text) {
 //Fetch API when user clicks on search button
 
 submitWord.addEventListener("click", () => {
-  accordion.innerHTML = "";
-  resultArea.setAttribute("style","border:2px solid gray");
   const word = wordInput.value;
   console.log(word);
 
